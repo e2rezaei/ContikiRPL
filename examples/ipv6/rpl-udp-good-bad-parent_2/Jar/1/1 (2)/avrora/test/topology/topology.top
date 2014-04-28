@@ -1,0 +1,15 @@
+#AvroraZ topology file example
+#Each line should be a node like: nodeid x y z rho
+#nodeid = node identifier
+#x y z = 3D node coordinates
+#rho: density of obstacles (if not present is zero) for each radio link 
+#simulator will take the maximum rho between transmitter and receiver
+node0 0 0 0 
+node1 1 0 0 
+node2 2 0 0
+node3 3 0 0
+node4 4 0 0
+node5 12 0 0
+node6 16 0 0
+node7 17 0 0
+node8 23 0 0

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-path: .
+Created-By: 1.6.0_30 (Sun Microsystems Inc.)
+Main-Class: se.sics.cooja.util.ExecuteJAR
+
