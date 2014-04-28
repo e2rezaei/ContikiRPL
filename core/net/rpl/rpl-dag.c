@@ -78,7 +78,7 @@ NBR_TABLE(rpl_parent_t, rpl_parents);
 rpl_instance_t instance_table[RPL_MAX_INSTANCES];
 rpl_instance_t *default_instance;
 /*---------------------------------------------------------------------------*/
-static int counter=0;
+//static int counter=0;
 /*---------------------------------------------------------------------------*/
 
 void
@@ -1281,7 +1281,7 @@ void monitor_parents(void)
 	uip_ipaddr_t *dest;
  uint16_t temp1,temp2;
 
-counter++;
+//counter++;
 	rpl_parent_t *pref_parent =(&instance_table[0])->current_dag->preferred_parent;
 	rpl_instance_t *instance=&instance_table[0];
 temp1 = ((((&instance_table[0])->current_dag->rank)%256)*100)/256;
