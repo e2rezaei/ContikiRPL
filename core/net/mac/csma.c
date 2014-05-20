@@ -236,13 +236,13 @@ packet_sent(void *ptr, int status, int num_transmissions)
 
         switch(status) {
         case MAC_TX_COLLISION:
-          PRINTF("csma: rexmit collision %d\n", n->transmissions);
+          printf("csma: rexmit collision %d\n", n->transmissions);
           break;
         case MAC_TX_NOACK:
-          PRINTF("csma: rexmit noack %d\n", n->transmissions);
+          printf("csma: rexmit noack %d\n", n->transmissions);
           break;
         default:
-          PRINTF("csma: rexmit err %d, %d\n", status, n->transmissions);
+          printf("csma: rexmit err %d, %d\n", status, n->transmissions);
         }
 
         /* The retransmission time must be proportional to the channel
@@ -264,7 +264,7 @@ packet_sent(void *ptr, int status, int num_transmissions)
         time = time + (random_rand() % (backoff_transmissions * time));
 
         if(n->transmissions < metadata->max_transmissions) {
-          PRINTF("csma: retransmitting with time %lu %p\n", time, q);
+          printf("csma: retransmitting with time %lu %p\n", time, q);
           ctimer_set(&n->transmit_timer, time,
                      transmit_packet_list, n);
           /* This is needed to correctly attribute energy that we spent
