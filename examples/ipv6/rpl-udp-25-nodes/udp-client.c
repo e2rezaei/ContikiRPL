@@ -152,7 +152,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
 #endif
 
   PROCESS_BEGIN();
-powertrace_start(CLOCK_SECOND * 2); //elnaz
+powertrace_start(CLOCK_SECOND * 1); //elnaz
 cc2420_set_txpower(15);
 printf(" Tx=%d\n", cc2420_get_txpower());
   PROCESS_PAUSE();
