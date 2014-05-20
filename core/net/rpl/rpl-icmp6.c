@@ -824,7 +824,7 @@ dao_output_target(rpl_parent_t *parent, uip_ipaddr_t *prefix, uint8_t lifetime)
   buffer[pos++] = 0; /* path seq - ignored */
   buffer[pos++] = lifetime;
 
-  PRINTF("RPL: Sending DAO with prefix ");
+  printf("sending DAO");
   PRINT6ADDR(prefix);
   PRINTF(" to ");
   PRINT6ADDR(rpl_get_parent_ipaddr(parent));

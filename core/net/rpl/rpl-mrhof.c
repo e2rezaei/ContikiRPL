@@ -116,6 +116,8 @@ neighbor_link_callback(rpl_parent_t *p, int status, int numtx)
   uint16_t packet_etx = numtx * RPL_DAG_MC_ETX_DIVISOR;
   uint16_t new_etx;
 
+  printf("numtx=%d\n", numtx);
+
   /* Do not penalize the ETX when collisions or transmission errors occur. */
   if(status == MAC_TX_OK || status == MAC_TX_NOACK) {
     if(status == MAC_TX_NOACK) {
