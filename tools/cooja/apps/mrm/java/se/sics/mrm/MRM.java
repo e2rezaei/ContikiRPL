@@ -88,7 +88,7 @@ public class MRM extends AbstractRadioMedium {
   
   private Simulation sim;
   private Random random = null;
-  private ChannelModel currentChannelModel = null;
+  public ChannelModel currentChannelModel = null;
 
   /**
    * Notifies observers when this radio medium has changed settings.
