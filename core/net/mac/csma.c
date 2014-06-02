@@ -280,7 +280,7 @@ packet_sent(void *ptr, int status, int num_transmissions)
         if(status == MAC_TX_OK) {
           PRINTF("csma: rexmit ok %d\n", n->transmissions);
         } else {
-          PRINTF("csma: rexmit failed %d: %d\n", n->transmissions, status);
+          printf("csma: rexmit failed %d: %d\n", n->transmissions, status);
         }
         free_packet(n, q);
         mac_call_sent_callback(sent, cptr, status, num_tx);
