@@ -164,7 +164,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
 
   cc2420_set_txpower(31);
 
-  printf("probe v \n Tx=%d\n", cc2420_get_txpower());
+  printf("standard RPL\n Tx=%d\n", cc2420_get_txpower());
 
   PROCESS_PAUSE();
 
