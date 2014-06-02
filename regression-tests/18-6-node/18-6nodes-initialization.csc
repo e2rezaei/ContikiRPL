@@ -90,8 +90,8 @@
       <breakpoints />
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>200.0</x>
-        <y>300.0</y>
+        <x>-2.742857142857069</x>
+        <y>300.9324185890629</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -174,7 +174,7 @@
   <plugin>
     se.sics.cooja.plugins.SimControl
     <width>280</width>
-    <z>0</z>
+    <z>2</z>
     <height>160</height>
     <location_x>971</location_x>
     <location_y>21</location_y>
@@ -191,7 +191,7 @@
       <viewport>1.5025252525252526 0.0 0.0 1.5025252525252526 82.12121212121204 -26.158558233566705</viewport>
     </plugin_config>
     <width>731</width>
-    <z>2</z>
+    <z>1</z>
     <height>620</height>
     <location_x>23</location_x>
     <location_y>42</location_y>
@@ -251,7 +251,7 @@ var node6 = sim.getMoteWithID(6);
 
 while(true) {
     
-    log.log(time +  "ID:" + id +  msg + "\n");
+    log.log(time +  " ID:" + id +  msg + "\n");
   
   if (msg.equals('finish')) {
       
@@ -265,7 +265,7 @@ while(true) {
       <active>true</active>
     </plugin_config>
     <width>600</width>
-    <z>1</z>
+    <z>0</z>
     <height>863</height>
     <location_x>715</location_x>
     <location_y>116</location_y>

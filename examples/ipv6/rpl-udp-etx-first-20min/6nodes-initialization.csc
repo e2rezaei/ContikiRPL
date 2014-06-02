@@ -251,7 +251,7 @@ var node6 = sim.getMoteWithID(6);
 
 while(true) {
     
-    log.log(time +  "ID:" + id +  msg + "\n");
+    log.log(time +  " ID:" + id +  msg + "\n");
   
   if (msg.equals('finish')) {
       

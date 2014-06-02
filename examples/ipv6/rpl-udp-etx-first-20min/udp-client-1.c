@@ -160,7 +160,7 @@ PROCESS_THREAD(udp_client_process, ev, data)
 
   PROCESS_BEGIN();
 
-//powertrace_start(CLOCK_SECOND * 1); //elnaz
+powertrace_start(CLOCK_SECOND * 1); //elnaz
 
   cc2420_set_txpower(31);
 

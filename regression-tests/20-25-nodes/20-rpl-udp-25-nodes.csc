@@ -563,7 +563,7 @@ GENERATE_MSG(3600000, 'finish');&#xD;
 &#xD;
 while(true) {&#xD;
     &#xD;
-  log.log(time + "ID:" + id +  msg + "\n");&#xD;
+  log.log(time + " ID:" + id +  msg + "\n");&#xD;
   &#xD;
   if (msg.equals('finish')) {&#xD;
       &#xD;

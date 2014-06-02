@@ -12,7 +12,9 @@
     <motedelay_us>1000000</motedelay_us>
     <radiomedium>
       se.sics.mrm.MRM
-      <obstacles />
+      <obstacles>
+        <obst>130.0;200.0;30.0;10.0</obst>
+      </obstacles>
     </radiomedium>
     <events>
       <logoutput>40000</logoutput>
@@ -90,8 +92,8 @@
       <breakpoints />
       <interface_config>
         se.sics.cooja.interfaces.Position
-        <x>-2.742857142857069</x>
-        <y>300.9324185890629</y>
+        <x>399.9126050420169</x>
+        <y>296.27359505965114</y>
         <z>0.0</z>
       </interface_config>
       <interface_config>
@@ -176,19 +178,19 @@
     <width>280</width>
     <z>2</z>
     <height>160</height>
-    <location_x>971</location_x>
-    <location_y>21</location_y>
+    <location_x>1042</location_x>
+    <location_y>30</location_y>
   </plugin>
   <plugin>
     se.sics.cooja.plugins.Visualizer
     <plugin_config>
       <moterelations>true</moterelations>
       <skin>se.sics.cooja.plugins.skins.IDVisualizerSkin</skin>
-      <skin>se.sics.cooja.plugins.skins.GridVisualizerSkin</skin>
       <skin>se.sics.cooja.plugins.skins.MoteTypeVisualizerSkin</skin>
       <skin>se.sics.mrm.MRMVisualizerSkin</skin>
       <skin>se.sics.cooja.plugins.skins.TrafficVisualizerSkin</skin>
-      <viewport>1.5025252525252526 0.0 0.0 1.5025252525252526 82.12121212121204 -26.158558233566705</viewport>
+      <skin>se.sics.cooja.plugins.skins.GridVisualizerSkin</skin>
+      <viewport>1.5025252525252526 0.0 0.0 1.5025252525252526 -87.87878787878797 -37.15855823356672</viewport>
     </plugin_config>
     <width>731</width>
     <z>1</z>
@@ -232,9 +234,11 @@
   <plugin>
     se.sics.cooja.plugins.ScriptRunner
     <plugin_config>
-      <script>TIMEOUT(3600000);
+      <script>TIMEOUT(3601000);
 
 GENERATE_MSG(1200000, 'move-1');
+
+GENERATE_MSG(3600000, 'finish');
 
 var node1 = sim.getMoteWithID(1);
  node1.getInterfaces().getPosition().setCoordinates(200, 300, 0);
@@ -250,7 +254,7 @@ var node6 = sim.getMoteWithID(6);
  node6.getInterfaces().getPosition().setCoordinates(300, 100, 0);   
 
 while(true) {
-      log.log(time +  "ID:" + id +  msg + "\n");
+      log.log(time +  " ID:" + id +  msg + "\n");
 
     if(msg.equals("move-1")) {
 
@@ -258,7 +262,11 @@ while(true) {
 
          var node1 = sim.getMoteWithID(1);
  
-         node1.getInterfaces().getPosition().setCoordinates(0,300, 0);        
+         node1.getInterfaces().getPosition().setCoordinates(400,300, 0);   
+         
+         var currentChannelModel= sim.getRadioMedium();
+        
+          currentChannelModel.currentChannelModel.addRectObstacle(330, 200, 30, 10);     
 
     } 
 
@@ -272,11 +280,11 @@ while(true) {
 }</script>
       <active>true</active>
     </plugin_config>
-    <width>600</width>
+    <width>777</width>
     <z>0</z>
     <height>863</height>
-    <location_x>715</location_x>
-    <location_y>116</location_y>
+    <location_x>809</location_x>
+    <location_y>111</location_y>
   </plugin>
 </simconf>
 
